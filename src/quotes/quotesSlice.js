@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import getRandomQuote from './quotesAPI';
 
+
 export const fetchQuotes = createAsyncThunk('quotes/fetchQuotes', async () => {
     const response = await getRandomQuote()
     return response
